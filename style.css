@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(145deg, #D32F2F, #FFEB3B); /* تدرج لوني ناري */
+    color: #000; /* لون النص */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px); /* تعديل لمطابقة عدد البطاقات */
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.card {
+    width: 100px; /* تعديل لمطابقة حجم البطاقات */
+    height: 100px; /* تعديل لمطابقة حجم البطاقات */
+    background-color: #FFF3E0; /* خلفية البطاقات بلون كريمي فاتح */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0px; /* إخفاء النص حتى يتم قلب البطاقة */
+    color: #5D4037; /* لون النص داخل البطاقات */
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* إضافة ظل للبطاقات */
+    transition: transform 0.3s ease;
+}
+
+.card.flipped {
+    font-size: 48px; /* إظهار النص عند قلب البطاقة */
+}
+
+.controls, button {
+    margin: 10px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #D32F2F; /* خلفية الزر بلون أحمر غامق */
+    color: #FFFFFF; /* لون النص أبيض */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:active {
+    background-color: #B71C1C; /* لون الزر عند اللمس */
+}
+
+.footer {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+h3 {
+    display: inline;
+}
+.win-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4CAF50; /* أو أي لون تفضله */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    text-align: center;
+}
+
+#win-message {
+    display: none; /* تأكد من أن الرسالة مخفية في البداية */
+    position: fixed; /* أو absolute، حسب ما تفضل */
+    top: 50%; /* لتوسيط الرسالة في وسط الصفحة */
+    left: 50%;
+    transform: translate(-50%, -50%); /* تعديل لضمان التوسيط الدقيق */
+    font-size: 24px; /* حجم الخط حسب الرغبة */
+    color: green; /* لون الخط */
+    padding: 20px; /* التبطين حول النص */
+    background-color: white; /* لون الخلفية */
+    border: 2px solid black; /* حدود الرسالة */
+    border-radius: 10px; /* تقريب زوايا الحدود */
+    z-index: 1000; /* التأكد من أن الرسالة تظهر فوق العناصر الأخرى */
+}
