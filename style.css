@@ -13,14 +13,14 @@ body {
 
 #game-board {
     display: grid;
-    grid-template-columns: repeat(4, 100px); /* تعديل لمطابقة عدد البطاقات */
-    gap: 10px;
-    margin: 20px 0;
+    grid-template-columns: repeat(4, 95px); /* تعديل لمطابقة عدد البطاقات */
+    gap: 5px;
+    margin: 10px 0;
 }
 
 .card {
-    width: 100px; /* تعديل لمطابقة حجم البطاقات */
-    height: 100px; /* تعديل لمطابقة حجم البطاقات */
+    width: 95px; /* تعديل لمطابقة حجم البطاقات */
+    height: 90px; /* تعديل لمطابقة حجم البطاقات */
     background-color: #FFF3E0; /* خلفية البطاقات بلون كريمي فاتح */
     display: flex;
     justify-content: center;
